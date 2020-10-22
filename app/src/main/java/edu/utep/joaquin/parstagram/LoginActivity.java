@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,9 +53,30 @@ public class LoginActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "SIGN-UP CLICKED", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(LoginActivity.this, "SIGN-UP CLICKED", Toast.LENGTH_SHORT).show();
+                signupUser(username.getText().toString() , password.getText().toString());
+                Log.d("abc123", "Sign-up clicked!!");
             }
         });
+    }
+
+    private void signupUser(String un, String pw) {
+//        ParseUser user = new ParseUser();
+//        user.setUsername(un);
+//        user.setPassword(pw);
+//        user.signUpInBackground(new SignUpCallback() {
+//            public void done(ParseException e) {
+//                if (e != null) {
+//                    Log.e("abc123", "issue with signup ");
+//                    Toast.makeText(LoginActivity.this, "signup failed", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                Log.d("abc123", "success! ");
+//                goMainActivity();
+//                Toast.makeText(LoginActivity.this, "Welcome new user", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+        goMainActivity();
     }
 
     //Check for username and password and if correct, intent to mainActivity
