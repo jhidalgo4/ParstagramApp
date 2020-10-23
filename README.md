@@ -36,6 +36,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+While creating the backend database for app on the web, I had to try twice in linking the API database from the web to my app. Creating a new project in (back4app.com) worked the second time around.
 
 ## Open-source libraries used
 
