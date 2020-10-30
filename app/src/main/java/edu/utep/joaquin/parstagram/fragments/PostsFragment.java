@@ -8,11 +8,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -26,6 +29,8 @@ import edu.utep.joaquin.parstagram.Post;
 import edu.utep.joaquin.parstagram.PostsAdapter;
 import edu.utep.joaquin.parstagram.R;
 
+import static com.parse.Parse.getApplicationContext;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link PostsFragment#newInstance} factory method to
@@ -35,6 +40,7 @@ public class PostsFragment extends Fragment {
     private RecyclerView rvPosts;
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
+    private SwipeRefreshLayout swipeContainer;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -75,6 +81,9 @@ public class PostsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
 
     @Override
@@ -88,13 +97,49 @@ public class PostsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         rvPosts = view.findViewById(R.id.rvPosts);
+        // Lookup the swipe container view
+        swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
+
+        // Adding Listener
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // Your code here
+                Toast.makeText(getApplicationContext(), "Refreshing...", Toast.LENGTH_LONG).show();
+                // To keep animation for 4 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+
+                        adapter.clear();
+
+                        populateTimeline();
+
+                        adapter.addAll(allPosts);
+                        // Stop animation (This will be after 3 seconds)
+                        swipeContainer.setRefreshing(false);
+                    }
+                }, 4000); // Delay in millis
+            }
+        });
+        // Scheme colors for animation
+        swipeContainer.setColorSchemeColors(
+                getResources().getColor(android.R.color.holo_blue_bright),
+                getResources().getColor(android.R.color.holo_green_light),
+                getResources().getColor(android.R.color.holo_orange_light),
+                getResources().getColor(android.R.color.holo_red_light)
+        );
+
         //Step 1:
         allPosts = new ArrayList<>();
         adapter = new PostsAdapter(getContext(), allPosts);
 
-        //step 3
         rvPosts.setAdapter(adapter);
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
+        populateTimeline();
+    }
+
+    public void populateTimeline(){
+
         queryPosts();
     }
 

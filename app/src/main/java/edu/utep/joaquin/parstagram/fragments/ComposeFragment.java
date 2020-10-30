@@ -47,7 +47,7 @@ import static android.app.Activity.RESULT_OK;
 public class ComposeFragment extends Fragment {
 
     public static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
-    Button btnSubmit, btnCamera, btnLogout;
+    Button btnSubmit, btnCamera;
     EditText etDescription;
     ImageView ivPostImage;
     private File photoFile;
@@ -104,7 +104,6 @@ public class ComposeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnCamera = view.findViewById(R.id.btnCamera);
-        btnLogout = view.findViewById(R.id.btnLogout);
         etDescription = view.findViewById(R.id.etDescription);
         ivPostImage = view.findViewById(R.id.ivPost);
 
@@ -134,18 +133,6 @@ public class ComposeFragment extends Fragment {
                 savePost(description, currentUser, photoFile);
             }
         });
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
-                Toast.makeText(getContext(), "LOG-OUT", Toast.LENGTH_SHORT).show();
-                Log.d("abc123", "LOGGED OUT ");
-                goLoginActivity();
-            }
-        });
-
     }
 
 

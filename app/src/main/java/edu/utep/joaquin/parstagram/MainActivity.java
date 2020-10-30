@@ -35,7 +35,9 @@ import java.io.File;
 import java.util.List;
 
 import edu.utep.joaquin.parstagram.fragments.ComposeFragment;
+import edu.utep.joaquin.parstagram.fragments.LogoutFragment;
 import edu.utep.joaquin.parstagram.fragments.PostsFragment;
+import edu.utep.joaquin.parstagram.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,9 +69,11 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new ComposeFragment();
                         break;
                     case R.id.action_profile:
-                        Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Post", Toast.LENGTH_SHORT).show();
+                        fragment = new PostsFragment();
                     default:
-                        fragment = new ComposeFragment();
+                        Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                        fragment = new LogoutFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
