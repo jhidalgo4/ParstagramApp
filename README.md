@@ -4,8 +4,6 @@
 
 <img src='https://media.giphy.com/media/ssIUTXrvQ0aNu3LSNL/giphy.gif' />
 
-## Video Walkthrough pt.2
-
 Upload function
 
 <img src='https://media.giphy.com/media/KikBGgKVUocwARAGHl/giphy.gif' />
