@@ -1,6 +1,6 @@
 # Parstagram (social media app)
 
-## New App Design - Walkthrough
+## New Design Walkthrough
 
 <img src='https://media.giphy.com/media/ssIUTXrvQ0aNu3LSNL/giphy.gif' />
 
