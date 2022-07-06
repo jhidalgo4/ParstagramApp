@@ -1,7 +1,10 @@
 # Parstagram (social media app)
 
+## New App Design - Walkthrough
 
-## Video Walkthrough
+<img src='https://media.giphy.com/media/ssIUTXrvQ0aNu3LSNL/giphy.gif' />
+
+## Video Walkthrough pt.2
 
 Here's a walkthrough of implemented user stories:
 
@@ -9,7 +12,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://media.giphy.com/media/mAi3dNSYVJHdlyaeDZ/giphy.gif' />
 
-## Video Walkthrough pt. 2
+## Video Walkthrough pt. 3
 
 <img src='https://media.giphy.com/media/op3Dwx5eDMujX0VGqg/giphy.gif' />
 
