@@ -11,8 +11,6 @@ Here's a walkthrough of implemented user stories:
 
 ## Video Walkthrough pt. 2
 
-Here's a walkthrough of implemented user stories:
-
 <img src='https://media.giphy.com/media/op3Dwx5eDMujX0VGqg/giphy.gif' />
 
 <img src='https://media.giphy.com/media/sKYXE4EhlyZYCmNwnN/giphy.gif' />
