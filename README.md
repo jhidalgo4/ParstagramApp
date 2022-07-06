@@ -14,8 +14,10 @@ Here's a walkthrough of implemented user stories:
 
 ## Video Walkthrough pt. 3
 
+scroll to update UI from database function
 <img src='https://media.giphy.com/media/op3Dwx5eDMujX0VGqg/giphy.gif' />
 
+logout function
 <img src='https://media.giphy.com/media/sKYXE4EhlyZYCmNwnN/giphy.gif' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
