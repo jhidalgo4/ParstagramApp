@@ -70,7 +70,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         public void bind(Post post) {
             //Bind to the view elements
             tvDescription.setText(post.getDescription() );
-            tvUsername.setText(post.getUser().getUsername() );
+            tvUsername.setText("@"+post.getUser().getUsername() );
             ParseFile image = post.getImage();
             if(image != null){
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
