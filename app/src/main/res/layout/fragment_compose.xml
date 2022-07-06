@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".fragments.ComposeFragment">
 
     <EditText
-        android:layout_marginTop="5dp"
         android:id="@+id/etDescription"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Description..."
         android:inputType="textPersonName"
-        android:hint="Description..." />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPost" />
 
     <Button
-        android:layout_marginTop="30dp"
         android:id="@+id/btnCamera"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#B7FF9D0D"
-        android:text="Take Picture" />
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#B7A3A6A4"
+        android:text="Take Picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_marginTop="30dp"
         android:id="@+id/ivPost"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera"
         tools:srcCompat="@tools:sample/avatars[7]" />
 
     <Button
-        android:layout_marginTop="30dp"
         android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#5ce1e6"
         android:text="Submit"
-        android:background="#B992DBE4"/>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!-- TODO: Update blank fragment layout -->
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

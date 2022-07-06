@@ -8,12 +8,13 @@
 
 
     <Button
-        android:layout_marginTop="70dp"
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:background="#B7FF9D0D"
-        />
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:background="#B7A3A6A4"
+        android:text="Logout" />
 
 </LinearLayout>
