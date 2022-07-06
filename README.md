@@ -6,19 +6,15 @@
 
 ## Video Walkthrough pt.2
 
-Here's a walkthrough of implemented user stories:
+Upload function
 
-<img src='https://media.giphy.com/media/VFtUDXJWKI3RtZefcn/giphy.gif' />
+<img src='https://media.giphy.com/media/KikBGgKVUocwARAGHl/giphy.gif' />
 
-<img src='https://media.giphy.com/media/mAi3dNSYVJHdlyaeDZ/giphy.gif' />
-
-## Video Walkthrough pt. 3
-
-scroll to update UI from database function
+scroll to update UI from database function - old design
 
 <img src='https://media.giphy.com/media/op3Dwx5eDMujX0VGqg/giphy.gif' />
 
-logout function
+logout function - old design
 
 <img src='https://media.giphy.com/media/sKYXE4EhlyZYCmNwnN/giphy.gif' />
 
