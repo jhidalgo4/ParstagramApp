@@ -39,9 +39,9 @@ Android mobile app is a photo sharing app similar to Instagram but using Parse a
 
 ## Open-source libraries used
 
+- [Back4App](https://www.back4app.com/) - Open source back-end
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
-- [Back4App](https://www.back4app.com/) - Open source back-end
 
 ## License
 
